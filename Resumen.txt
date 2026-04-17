@@ -1,0 +1,23 @@
+﻿El proyecto " xxxxxx" consiste en el diseño y análisis de una aplicación móvil innovadora, basada en tecnología Open Source, destinada a transformar y mejorar las tasas de reciclaje de biorresiduos en el municipio de Coslada.
+
+
+Actualmente, la localidad presenta una tasa de reciclaje de apenas el 26%, lo que incumple el objetivo europeo del 55% fijado para 2025 y supone un grave riesgo económico por los altos costes de gestión de la "Fracción Resto" (135 €/tonelada frente a los 47 €/tonelada del residuo orgánico).
+
+
+Para dar solución a esta ineficiencia, el software diseñado permite a los ciudadanos registrar su domicilio en el sistema para obtener un número de socio único con el que identificar sus bolsas de basura. 
+
+
+La lógica de negocio gestiona un sorteo semanal auditado de 100 bolsas, determinando al ganador mediante los dos últimos dígitos del sorteo de la ONCE de los jueves. 
+
+
+Si el biorresiduo de la bolsa ganadora está correctamente separado, el sistema asigna un premio de 1.000 € al usuario; de lo contrario, el bote se acumula.
+
+
+Como conclusiones generales, el análisis técnico y de viabilidad demuestra que el desarrollo de este sistema es altamente rentable. 
+
+
+Con un coste operativo de infraestructura y premios estimado en 92.000 € anuales, la aplicación conseguiría reubicar el 30% de la materia orgánica mal clasificada. 
+
+
+Esto generaría un ahorro directo de 901.265 € al año para el Ayuntamiento de Coslada, demostrando que la gamificación e incentivación ciudadana apoyada en el software es una herramienta clave para alcanzar la sostenibilidad y evitar sanciones normativas.
+________________
