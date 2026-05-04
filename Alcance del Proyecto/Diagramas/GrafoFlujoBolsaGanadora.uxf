@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+
+  <!-- NODO 1: Evaluación del if -->
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates><x>300</x><y>50</y><w>40</w><h>40</h></coordinates>
+    <panel_attributes>1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates><x>350</x><y>40</y><w>210</w><h>50</h></coordinates>
+    <panel_attributes>if (reciclajeCorrecto == true)
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- NODO 2: Camino Verdadero -->
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates><x>200</x><y>150</y><w>40</w><h>40</h></coordinates>
+    <panel_attributes>2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates><x>20</x><y>140</y><w>170</w><h>50</h></coordinates>
+    <panel_attributes>entregarPremio();
+nuevoBote = 1000.0;
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- NODO 3: Camino Falso -->
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates><x>400</x><y>150</y><w>40</w><h>40</h></coordinates>
+    <panel_attributes>3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates><x>450</x><y>140</y><w>240</w><h>50</h></coordinates>
+    <panel_attributes>nuevoBote = boteActual + 1000.0;
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- NODO 4: Fin de ejecución -->
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates><x>300</x><y>250</y><w>40</w><h>40</h></coordinates>
+    <panel_attributes>4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates><x>350</x><y>245</y><w>150</w><h>40</h></coordinates>
+    <panel_attributes>return nuevoBote;
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- FLECHA: NODO 1 -> NODO 2 (Verdadero) -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>220</x><y>80</y><w>100</w><h>90</h></coordinates>
+    <panel_attributes>lt=-&gt;
+Verdadero</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+
+  <!-- FLECHA: NODO 1 -> NODO 3 (Falso) -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>320</x><y>80</y><w>110</w><h>90</h></coordinates>
+    <panel_attributes>lt=-&gt;
+Falso</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;70.0</additional_attributes>
+  </element>
+
+  <!-- FLECHA: NODO 2 -> NODO 4 -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>220</x><y>180</y><w>100</w><h>90</h></coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;70.0</additional_attributes>
+  </element>
+
+  <!-- FLECHA: NODO 3 -> NODO 4 -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>320</x><y>180</y><w>110</w><h>90</h></coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  
+</diagram>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+
+  <!-- ACTORES -->
+  <element>
+    <id>UMLActor</id>
+    <coordinates><x>20</x><y>250</y><w>120</w><h>100</h></coordinates>
+    <panel_attributes>Auditor /
+Administrador</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <element>
+    <id>UMLActor</id>
+    <coordinates><x>10</x><y>100</y><w>140</w><h>100</h></coordinates>
+    <panel_attributes>&lt;&lt;system&gt;&gt;
+Sistema Externo
+ONCE</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- CLASE INTERFAZ (BOUNDARY) -->
+  <element>
+    <id>UMLClass</id>
+    <coordinates><x>190</x><y>140</y><w>350</w><h>180</h></coordinates>
+    <panel_attributes>&lt;&lt;boundary&gt;&gt;
+PantallaSorteoAuditoria
+--
+- fechaSorteo: Date
+- numeroONCE: String
+--
++ iniciarSorteo(numeroONCE: String): void
++ mostrarBolsaGanadora(): void
++ registrarInspeccionFisica(resultado: Boolean): void
++ subirRegistroFotografico(foto: Archivo): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- CLASE DE CONTROL (CONTROL) -->
+  <element>
+    <id>UMLClass</id>
+    <coordinates><x>610</x><y>150</y><w>340</w><h>160</h></coordinates>
+    <panel_attributes>&lt;&lt;control&gt;&gt;
+GestorSorteo
+--
+--
++ seleccionarCienBolsas(): void
++ calcularGanador(numeroONCE: String): void
++ evaluarResultadoValidacion(resultado: Boolean): void
++ asignarPremio(numeroUsuario: String): void
++ acumularBoteSiguienteSemana(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- CLASE DE ENTIDAD 1 (ENTITY) -->
+  <element>
+    <id>UMLClass</id>
+    <coordinates><x>1020</x><y>50</y><w>270</w><h>160</h></coordinates>
+    <panel_attributes>&lt;&lt;entity&gt;&gt;
+SorteoSemanal
+--
+- idSorteo: String
+- fecha: Date
+- numeroGanadorONCE: String
+- boteDisponible: Double
+- estadoSorteo: String
+--
++ crearSorteo(): void
++ actualizarBote(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- CLASE DE ENTIDAD 2 (ENTITY) -->
+  <element>
+    <id>UMLClass</id>
+    <coordinates><x>1020</x><y>250</y><w>270</w><h>150</h></coordinates>
+    <panel_attributes>&lt;&lt;entity&gt;&gt;
+BolsaValidada
+--
+- numeroBolsa: String
+- numeroUsuario: String
+- reciclajeCorrecto: Boolean
+- evidenciaFotografica: String
+--
++ guardarResultadoInspeccion(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- RELACIONES -->
+
+  <!-- 1. Sistema ONCE a PantallaSorteoAuditoria (Asociación) -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>90</x><y>140</y><w>120</w><h>60</h></coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;40.0</additional_attributes>
+  </element>
+
+  <!-- 2. Auditor a PantallaSorteoAuditoria (Asociación) -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>90</x><y>240</y><w>120</w><h>60</h></coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;40.0;100.0;10.0</additional_attributes>
+  </element>
+
+  <!-- 3. PantallaSorteoAuditoria a GestorSorteo (Flecha Unidireccional) -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>530</x><y>220</y><w>100</w><h>30</h></coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+
+  <!-- 4. GestorSorteo a SorteoSemanal (Flecha Unidireccional) -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>940</x><y>130</y><w>100</w><h>80</h></coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+
+  <!-- 5. GestorSorteo a BolsaValidada (Flecha Unidireccional) -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>940</x><y>240</y><w>100</w><h>80</h></coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>80.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+
+</diagram>

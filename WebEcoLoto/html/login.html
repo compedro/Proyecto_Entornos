@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoLoto - Inicio de sesion</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <h1>Inicio de sesion</h1>
+        <p class="muted">Introduce tus credenciales para acceder a tu panel.</p>
+      </section>
+
+      <form id="loginForm">
+        <label for="dni">DNI</label>
+        <input id="dni" name="dni" required />
+
+        <label for="password">Contrasena</label>
+        <input id="password" type="password" name="password" required />
+
+        <p id="loginError" class="error"></p>
+        <div class="btn-row">
+          <button class="btn" type="submit">Iniciar sesion</button>
+          <a class="btn secondary" href="recuperar.html">Necesita ayuda? Olvido su contrasena?</a>
+        </div>
+      </form>
+    </main>
+    <script src="../js/app.js"></script>
+  </body>
+</html>
+

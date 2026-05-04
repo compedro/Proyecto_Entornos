@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoLoto - Notificaciones</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body data-secure="true">
+    <div class="layout">
+      <aside class="sidebar">
+        <h2>EcoLoto</h2>
+        <p class="small">Usuario: <strong id="topUser">-</strong></p>
+        <ul class="menu">
+          <li><a href="panel.html">Inicio</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="configuracion.html">Configuracion</a></li>
+          <li><a href="notificaciones.html" class="active">Notificaciones</a></li>
+        </ul>
+        <button id="logoutBtn" class="btn secondary" type="button">Cerrar sesion</button>
+      </aside>
+
+      <main class="main">
+        <div class="topbar">
+          <strong>Notificaciones</strong>
+          <span class="badge">Participacion: <span id="topParticipation">-</span></span>
+        </div>
+
+        <section class="card">
+          <h2>Actualizaciones de sorteo</h2>
+          <div id="userNotifications"></div>
+        </section>
+      </main>
+    </div>
+    <script src="../js/app.js"></script>
+  </body>
+</html>
+

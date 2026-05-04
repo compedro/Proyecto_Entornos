@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoLoto - Recuperar acceso</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <h1>Recuperar contrasena</h1>
+        <p class="muted">Introduce tu numero de telefono o correo para enviar la recuperacion.</p>
+      </section>
+
+      <form id="recoverForm">
+        <label for="channel">Telefono o correo</label>
+        <input id="channel" name="channel" required />
+
+        <div class="btn-row">
+          <button class="btn" type="submit">Enviar recuperacion</button>
+          <a class="btn secondary" href="login.html">Volver a inicio de sesion</a>
+        </div>
+        <p id="recoverMessage" class="small"></p>
+      </form>
+    </main>
+    <script src="../js/app.js"></script>
+  </body>
+</html>
+

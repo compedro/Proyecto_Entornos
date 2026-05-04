@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoLoto - Perfil</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body data-secure="true">
+    <div class="layout">
+      <aside class="sidebar">
+        <h2>EcoLoto</h2>
+        <p class="small">Usuario: <strong id="topUser">-</strong></p>
+        <ul class="menu">
+          <li><a href="panel.html">Inicio</a></li>
+          <li><a href="perfil.html" class="active">Perfil</a></li>
+          <li><a href="configuracion.html">Configuracion</a></li>
+          <li><a href="notificaciones.html">Notificaciones</a></li>
+        </ul>
+        <button id="logoutBtn" class="btn secondary" type="button">Cerrar sesion</button>
+      </aside>
+
+      <main class="main">
+        <div class="topbar">
+          <strong>Perfil de usuario</strong>
+          <span class="badge">Participacion: <span id="topParticipation">-</span></span>
+        </div>
+
+        <form id="perfilForm">
+          <fieldset>
+            <legend>Datos editables</legend>
+            <label for="dni">DNI (no editable)</label>
+            <input id="dni" name="dni" readonly />
+
+            <label for="firstName">Nombre</label>
+            <input id="firstName" name="firstName" required />
+
+            <label for="lastName">Apellidos</label>
+            <input id="lastName" name="lastName" required />
+
+            <label for="username">Nombre de usuario</label>
+            <input id="username" name="username" required />
+
+            <label for="contact">Telefono o correo</label>
+            <input id="contact" name="contact" required />
+          </fieldset>
+
+          <fieldset>
+            <legend>Domicilio</legend>
+            <label for="roadType">Tipo de via</label>
+            <select id="roadType" name="roadType" required>
+              <option value="Calle">Calle</option>
+              <option value="Avenida">Avenida</option>
+              <option value="Plaza">Plaza</option>
+              <option value="Paseo">Paseo</option>
+            </select>
+
+            <label for="roadName">Nombre de via</label>
+            <input id="roadName" name="roadName" required />
+
+            <label for="number">Numero</label>
+            <input id="number" name="number" required />
+
+            <label for="floor">Piso</label>
+            <input id="floor" name="floor" />
+
+            <label for="locality">Localidad</label>
+            <input id="locality" name="locality" required />
+
+            <label for="postalCode">Codigo postal</label>
+            <input id="postalCode" name="postalCode" required />
+          </fieldset>
+
+          <button class="btn" type="submit">Guardar cambios</button>
+          <p id="perfilOk" class="small"></p>
+        </form>
+      </main>
+    </div>
+    <script src="../js/app.js"></script>
+  </body>
+</html>
+

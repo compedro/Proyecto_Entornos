@@ -1,23 +1,15 @@
-﻿El proyecto " xxxxxx" consiste en el diseño y análisis de una aplicación móvil innovadora, basada en tecnología Open Source, destinada a transformar y mejorar las tasas de reciclaje de biorresiduos en el municipio de Coslada.
-
-
-Actualmente, la localidad presenta una tasa de reciclaje de apenas el 26%, lo que incumple el objetivo europeo del 55% fijado para 2025 y supone un grave riesgo económico por los altos costes de gestión de la "Fracción Resto" (135 €/tonelada frente a los 47 €/tonelada del residuo orgánico).
-
-
-Para dar solución a esta ineficiencia, el software diseñado permite a los ciudadanos registrar su domicilio en el sistema para obtener un número de socio único con el que identificar sus bolsas de basura. 
-
-
-La lógica de negocio gestiona un sorteo semanal auditado de 100 bolsas, determinando al ganador mediante los dos últimos dígitos del sorteo de la ONCE de los jueves. 
-
-
-Si el biorresiduo de la bolsa ganadora está correctamente separado, el sistema asigna un premio de 1.000 € al usuario; de lo contrario, el bote se acumula.
-
-
-Como conclusiones generales, el análisis técnico y de viabilidad demuestra que el desarrollo de este sistema es altamente rentable. 
-
-
-Con un coste operativo de infraestructura y premios estimado en 92.000 € anuales, la aplicación conseguiría reubicar el 30% de la materia orgánica mal clasificada. 
-
-
-Esto generaría un ahorro directo de 901.265 € al año para el Ayuntamiento de Coslada, demostrando que la gamificación e incentivación ciudadana apoyada en el software es una herramienta clave para alcanzar la sostenibilidad y evitar sanciones normativas.
-________________
+﻿1. Resumen
+El proyecto EcoLoto consiste en el diseño y análisis de una aplicación web de código abierto orientada a mejorar la gestión de biorresiduos en el municipio de Coslada, con intención de una ampliación a nivel nacional. En la actualidad, el municipio presenta una tasa de reciclaje del 26%, muy inferior al objetivo europeo del 55% fijado para 2025, lo que supone un problema ambiental y económico relevante debido al elevado coste de tratamiento de la fracción resto frente al residuo orgánico.
+La solución propuesta se basa en una plataforma web que permite a los ciudadanos registrarse mediante su domicilio, obteniendo un identificador único asociado a sus bolsas de residuos. El sistema incorpora un mecanismo de gamificación mediante un sorteo semanal auditado: cada semana se seleccionan 100 bolsas y el resultado se determina a partir de los dos últimos dígitos del sorteo de la ONCE de los jueves. En caso de que la bolsa premiada esté correctamente separada, el usuario recibe un incentivo económico de 1.000 €, mientras que si no cumple los criterios, el premio se acumula para futuras semanas.
+El análisis del proyecto demuestra que este sistema es viable y rentable, con un coste operativo estimado de 92.000 € anuales. Su implementación permitiría reubicar aproximadamente el 30% de la materia orgánica mal clasificada, generando un ahorro directo estimado de 901.265 € al año para el Ayuntamiento de Coslada. En conclusión, la combinación de tecnología web, trazabilidad y gamificación se presenta como una herramienta eficaz para mejorar la sostenibilidad urbana y cumplir los objetivos europeos de reciclaje.
+2. Introducción (contextualización y justificación)
+Este proyecto se desarrolla con el objetivo de abordar la baja tasa de reciclaje de biorresiduos en el municipio de Coslada, que actualmente se sitúa en un 26%, muy por debajo de los estándares europeos. La motivación principal es mejorar la eficiencia del sistema de gestión de residuos mediante una solución tecnológica accesible, escalable y de bajo coste relativo.
+Se ha elegido el desarrollo de una aplicación web por su facilidad de acceso para los ciudadanos, eliminando la necesidad de instalación y permitiendo una mayor participación. Además, el uso de tecnologías Open Source facilita su implementación, mantenimiento y posible replicación en otros municipios. La incorporación de un sistema de incentivos busca fomentar el cambio de comportamiento ciudadano a través de la gamificación, alineando beneficios económicos con buenas prácticas ambientales.
+3. Objetivos del proyecto
+1. Incrementar la tasa de reciclaje de biorresiduos en el municipio de Coslada.
+2. Reducir la cantidad de residuos mal clasificados en la fracción resto.
+3. Disminuir los costes asociados a la gestión de residuos urbanos.
+4. Fomentar la participación ciudadana en la separación correcta de residuos.
+5. Evaluar la eficacia del sistema de incentivos basado en gamificación.
+6. Analizar la viabilidad técnica, económica y operativa de la aplicación web.
+7. Comprobar el impacto del sistema en el cumplimiento de los objetivos europeos de reciclaje.

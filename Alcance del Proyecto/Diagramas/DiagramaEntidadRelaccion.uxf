@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+
+  <!-- ENTIDAD 1: USUARIO -->
+  <element>
+    <id>UMLClass</id>
+    <coordinates><x>60</x><y>80</y><w>240</w><h>140</h></coordinates>
+    <panel_attributes>&lt;&lt;entity&gt;&gt;
+USUARIO
+--
+PK DNI
+Nombre_Representante
+Calle
+Numero
+Portal
+Num_Usuario_Unico</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- ENTIDAD 5: SOLICITUD_ETIQUETA -->
+  <element>
+    <id>UMLClass</id>
+    <coordinates><x>480</x><y>80</y><w>230</w><h>130</h></coordinates>
+    <panel_attributes>&lt;&lt;entity&gt;&gt;
+SOLICITUD_ETIQUETA
+--
+PK ID_Solicitud
+Fecha_Peticion
+Cantidad_Lotes
+Estado_Envio
+FK DNI_Usuario
+FK ID_Patrocinador</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- ENTIDAD 4: PATROCINADOR -->
+  <element>
+    <id>UMLClass</id>
+    <coordinates><x>880</x><y>90</y><w>230</w><h>100</h></coordinates>
+    <panel_attributes>&lt;&lt;entity&gt;&gt;
+PATROCINADOR
+--
+PK ID_Patrocinador
+Nombre_Empresa
+Presupuesto_Gastado</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- ENTIDAD 3: BOLSA_PARTICIPANTE -->
+  <element>
+    <id>UMLClass</id>
+    <coordinates><x>60</x><y>360</y><w>240</w><h>140</h></coordinates>
+    <panel_attributes>&lt;&lt;entity&gt;&gt;
+BOLSA_PARTICIPANTE
+--
+PK ID_Bolsa
+Numero_Bolsa
+Es_Ganadora
+Reciclaje_Correcto
+Foto_Evidencia
+FK DNI_Usuario
+FK ID_Sorteo</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- ENTIDAD 2: SORTEO -->
+  <element>
+    <id>UMLClass</id>
+    <coordinates><x>480</x><y>370</y><w>230</w><h>120</h></coordinates>
+    <panel_attributes>&lt;&lt;entity&gt;&gt;
+SORTEO
+--
+PK ID_Sorteo
+Fecha_Sorteo
+Numero_ONCE
+Bote_Acumulado
+Estado</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- RELACIONES (CARDINALIDADES) -->
+
+  <!-- Relación: USUARIO a BOLSA_PARTICIPANTE (1:N) -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>170</x><y>210</y><w>80</w><h>170</h></coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=N
+Deposita v</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+
+  <!-- Relación: USUARIO a SOLICITUD_ETIQUETA (1:N) -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>290</x><y>120</y><w>210</w><h>50</h></coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=N
+Realiza &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+
+  <!-- Relación: PATROCINADOR a SOLICITUD_ETIQUETA (1:N) -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>700</x><y>110</y><w>200</w><h>50</h></coordinates>
+    <panel_attributes>lt=-
+m1=N
+m2=1
+&lt; Financia</panel_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
+  </element>
+
+  <!-- Relación: SORTEO a BOLSA_PARTICIPANTE (1:N) -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>290</x><y>400</y><w>210</w><h>50</h></coordinates>
+    <panel_attributes>lt=-
+m1=N
+m2=1
+&lt; Evalúa</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+
+</diagram>

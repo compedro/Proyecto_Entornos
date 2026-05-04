@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+
+  <!-- LÍMITE DEL SISTEMA -->
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates><x>250</x><y>20</y><w>470</w><h>620</h></coordinates>
+    <panel_attributes>App Eco-Incentivo
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- ACTORES -->
+  <element>
+    <id>UMLActor</id>
+    <coordinates><x>50</x><y>160</y><w>80</w><h>100</h></coordinates>
+    <panel_attributes>Ciudadano</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <element>
+    <id>UMLActor</id>
+    <coordinates><x>740</x><y>280</y><w>120</w><h>100</h></coordinates>
+    <panel_attributes>&lt;&lt;system&gt;&gt;
+Sistema de
+la ONCE</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <element>
+    <id>UMLActor</id>
+    <coordinates><x>730</x><y>420</y><w>140</w><h>100</h></coordinates>
+    <panel_attributes>Auditor /
+Administrador</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- CASOS DE USO -->
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates><x>280</x><y>50</y><w>160</w><h>50</h></coordinates>
+    <panel_attributes>CU02: Asignar
+número de usuario</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates><x>310</x><y>130</y><w>160</w><h>50</h></coordinates>
+    <panel_attributes>CU01: Registrar
+domicilio</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates><x>300</x><y>230</y><w>180</w><h>60</h></coordinates>
+    <panel_attributes>CU03: Identificar bolsa
+(Nº de Usuario)</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates><x>540</x><y>230</y><w>160</w><h>60</h></coordinates>
+    <panel_attributes>CU04: Usar etiquetas
+de patrocinadores</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates><x>300</x><y>360</y><w>160</w><h>60</h></coordinates>
+    <panel_attributes>CU05: Ejecutar
+sorteo semanal</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates><x>410</x><y>460</y><w>160</w><h>50</h></coordinates>
+    <panel_attributes>CU06: Validar
+bolsa premiada</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates><x>290</x><y>550</y><w>170</w><h>60</h></coordinates>
+    <panel_attributes>CU07: Asignar premio /
+Acumular bote</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- NOTA PARA EL EXTEND -->
+  <element>
+    <id>UMLNote</id>
+    <coordinates><x>540</x><y>130</y><w>160</w><h>60</h></coordinates>
+    <panel_attributes>Condición {extend}:
+Solo se aplica si hay
+patrocinadores</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- RELACIONES DE ACTORES A CASOS DE USO -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>110</x><y>140</y><w>220</w><h>70</h></coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;50.0;200.0;10.0</additional_attributes>
+  </element>
+
+  <element>
+    <id>Relation</id>
+    <coordinates><x>110</x><y>200</y><w>210</w><h>70</h></coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;190.0;50.0</additional_attributes>
+  </element>
+
+  <element>
+    <id>Relation</id>
+    <coordinates><x>450</x><y>310</y><w>310</w><h>90</h></coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;70.0;290.0;10.0</additional_attributes>
+  </element>
+
+  <element>
+    <id>Relation</id>
+    <coordinates><x>450</x><y>400</y><w>300</w><h>80</h></coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;280.0;60.0</additional_attributes>
+  </element>
+
+  <element>
+    <id>Relation</id>
+    <coordinates><x>560</x><y>460</y><w>190</w><h>40</h></coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;10.0</additional_attributes>
+  </element>
+
+  <!-- RELACIONES AVANZADAS -->
+  <!-- CU01 incluye CU02 -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>350</x><y>90</y><w>90</w><h>60</h></coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>30.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+
+  <!-- CU04 extiende CU03 -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>470</x><y>240</y><w>90</w><h>40</h></coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extend&gt;&gt;</panel_attributes>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+
+  <!-- Enlace de la Nota al Extend -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>500</x><y>180</y><w>80</w><h>90</h></coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+
+  <!-- CU06 incluye CU07 -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>370</x><y>500</y><w>110</w><h>70</h></coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+
+</diagram>

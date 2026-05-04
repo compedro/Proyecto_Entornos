@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+
+  <!-- ACTOR -->
+  <element>
+    <id>UMLActor</id>
+    <coordinates><x>40</x><y>200</y><w>80</w><h>100</h></coordinates>
+    <panel_attributes>Ciudadano</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- CLASE INTERFAZ (BOUNDARY) -->
+  <element>
+    <id>UMLClass</id>
+    <coordinates><x>180</x><y>150</y><w>300</w><h>160</h></coordinates>
+    <panel_attributes>&lt;&lt;boundary&gt;&gt;
+PantallaSolicitudEtiquetas
+--
+- numeroUsuario: String
+- cantidadLotes: Integer
+--
++ mostrarFormularioSolicitud(): void
++ enviarPeticion(): void
++ mostrarConfirmacion(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- CLASE DE CONTROL (CONTROL) -->
+  <element>
+    <id>UMLClass</id>
+    <coordinates><x>560</x><y>150</y><w>380</w><h>160</h></coordinates>
+    <panel_attributes>&lt;&lt;control&gt;&gt;
+GestorEtiquetas
+--
+--
++ validarNumeroUsuario(numeroUsuario: String): void
++ procesarSolicitud(numeroUsuario: String, cantidadLotes: Integer): void
++ generarOrdenPatrocinador(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- CLASE DE ENTIDAD 1 (ENTITY) -->
+  <element>
+    <id>UMLClass</id>
+    <coordinates><x>1020</x><y>60</y><w>260</w><h>140</h></coordinates>
+    <panel_attributes>&lt;&lt;entity&gt;&gt;
+SolicitudEtiqueta
+--
+- idSolicitud: String
+- fechaSolicitud: Date
+- estadoEnvio: String
+--
++ crearRegistroSolicitud(): void
++ actualizarEstado(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- CLASE DE ENTIDAD 2 (ENTITY) -->
+  <element>
+    <id>UMLClass</id>
+    <coordinates><x>1020</x><y>270</y><w>260</w><h>140</h></coordinates>
+    <panel_attributes>&lt;&lt;entity&gt;&gt;
+Patrocinador
+--
+- idSocioComercial: String
+- nombreEmpresa: String
+- presupuestoConsumido: Double
+--
++ descontarCosteLogistico(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- RELACIONES -->
+
+  <!-- 1. Ciudadano a PantallaSolicitudEtiquetas (Asociación Simple) -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>90</x><y>220</y><w>110</w><h>40</h></coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+
+  <!-- 2. PantallaSolicitudEtiquetas a GestorEtiquetas (Flecha Unidireccional) -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>470</x><y>220</y><w>110</w><h>30</h></coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+
+  <!-- 3. GestorEtiquetas a SolicitudEtiqueta (Flecha Unidireccional) -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>930</x><y>120</y><w>110</w><h>100</h></coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+
+  <!-- 4. GestorEtiquetas a Patrocinador (Flecha Unidireccional) -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>930</x><y>240</y><w>110</w><h>100</h></coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>90.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+
+</diagram>

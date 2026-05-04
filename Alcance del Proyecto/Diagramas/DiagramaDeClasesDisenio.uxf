@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+
+  <!-- CLASE DE LÓGICA DE NEGOCIO (CONTROLADOR) -->
+  <element>
+    <id>UMLClass</id>
+    <coordinates><x>20</x><y>40</y><w>560</w><h>140</h></coordinates>
+    <panel_attributes>GestorSorteo
+--
+- historialSorteos: List&lt;Sorteo&gt;
+--
++ seleccionarGanador(sorteoActual: Sorteo, bolsas: List&lt;Bolsa&gt;): Bolsa
++ validarPremio(bolsaGanadora: Bolsa, sorteoActual: Sorteo): boolean
++ calcularNuevoBote(sorteoActual: Sorteo, ganadorValido: boolean): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- CLASE DE MODELO 1: Sorteo -->
+  <element>
+    <id>UMLClass</id>
+    <coordinates><x>680</x><y>30</y><w>300</w><h>160</h></coordinates>
+    <panel_attributes>Sorteo
+--
+- idSorteo: String
+- fecha: LocalDate
+- numeroONCE: String
+- boteDisponible: double
+- estado: String
+--
++ Sorteo(fecha: LocalDate, boteInicial: double)
++ setNumeroONCE(numero: String): void
++ getBoteDisponible(): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- CLASE DE MODELO 2: Bolsa -->
+  <element>
+    <id>UMLClass</id>
+    <coordinates><x>1080</x><y>40</y><w>320</w><h>140</h></coordinates>
+    <panel_attributes>Bolsa
+--
+- idBolsa: String
+- numeroBolsa: int
+- numUsuarioUnico: String
+- reciclajeCorrecto: boolean
+--
++ Bolsa(numeroBolsa: int, numUsuario: String)
++ auditarReciclaje(estado: boolean): void
++ isReciclajeCorrecto(): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- CLASE DE MODELO 3: Usuario -->
+  <element>
+    <id>UMLClass</id>
+    <coordinates><x>100</x><y>300</y><w>400</w><h>150</h></coordinates>
+    <panel_attributes>Usuario
+--
+- dni: String
+- nombreRepresentante: String
+- direccion: String
+- numUsuarioUnico: String
+--
++ Usuario(dni: String, nombre: String, direccion: String)
++ generarNumUsuarioUnico(): String
++ getDni(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- RELACIONES -->
+
+  <!-- 1. Asociación Simple: GestorSorteo administra Sorteos -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>570</x><y>100</y><w>130</w><h>40</h></coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=*</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+
+  <!-- 2. Agregación: Sorteo agrupa Bolsas (Rombo hueco del lado de Sorteo) -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>970</x><y>100</y><w>130</w><h>50</h></coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=100</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+
+  <!-- 3. Dependencia: GestorSorteo usa/busca al Usuario -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>280</x><y>170</y><w>90</w><h>150</h></coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+
+</diagram>

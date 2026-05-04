@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoLoto - Registro</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <h1>Alta de usuario</h1>
+        <p class="muted">Completa los datos para crear tu cuenta EcoLoto.</p>
+      </section>
+
+      <form id="registroForm">
+        <fieldset>
+          <legend>Datos personales</legend>
+          <label for="dni">DNI</label>
+          <input id="dni" name="dni" required />
+
+          <label for="firstName">Nombre</label>
+          <input id="firstName" name="firstName" required />
+
+          <label for="lastName">Apellidos</label>
+          <input id="lastName" name="lastName" required />
+
+          <label for="username">Nombre de usuario</label>
+          <input id="username" name="username" required />
+        </fieldset>
+
+        <fieldset>
+          <legend>Domicilio de residencia</legend>
+          <label for="roadType">Tipo de via</label>
+          <select id="roadType" name="roadType" required>
+            <option value="Calle">Calle</option>
+            <option value="Avenida">Avenida</option>
+            <option value="Plaza">Plaza</option>
+            <option value="Paseo">Paseo</option>
+          </select>
+
+          <label for="roadName">Nombre de via</label>
+          <input id="roadName" name="roadName" required />
+
+          <label for="number">Numero</label>
+          <input id="number" name="number" required />
+
+          <label for="floor">Piso</label>
+          <input id="floor" name="floor" placeholder="Ejemplo: 3B" />
+
+          <label for="locality">Localidad</label>
+          <input id="locality" name="locality" required />
+
+          <label for="postalCode">Codigo postal</label>
+          <input id="postalCode" name="postalCode" required />
+        </fieldset>
+
+        <fieldset>
+          <legend>Contacto y acceso</legend>
+          <label for="contact">Telefono o correo</label>
+          <input id="contact" name="contact" required />
+
+          <label for="password">Generar contrasena</label>
+          <input
+            id="password"
+            type="password"
+            name="password"
+            required
+            minlength="8"
+            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d]).{8,}"
+            title="Minimo 8 caracteres, con mayuscula, minuscula, numero y simbolo"
+          />
+
+          <label for="confirmPassword">Verificar contrasena</label>
+          <input id="confirmPassword" type="password" name="confirmPassword" required />
+        </fieldset>
+
+        <p id="registroError" class="error"></p>
+        <div class="btn-row">
+          <button class="btn" type="submit">Crear cuenta</button>
+          <a class="btn secondary" href="index.html">Volver a inicio</a>
+        </div>
+      </form>
+    </main>
+    <script src="../js/app.js"></script>
+  </body>
+</html>
+

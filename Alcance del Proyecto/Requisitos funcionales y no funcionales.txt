@@ -1,0 +1,14 @@
+﻿Requisitos funcionales y no funcionales
+Funcionales 
+* Registro de usuarios y domicilios: El sistema debe permitir a los ciudadanos registrarse introduciendo información específica: calle, número, portal, nombre del representante del domicilio y su DNI.
+* Asignación de identificador único: Al finalizar el registro, la aplicación debe generar y asignar automáticamente un número de socio único que servirá para identificar las bolsas de basura de ese usuario.
+* Gestión del sorteo semanal: El sistema debe estructurar un proceso que abarque de lunes a domingo, en el cual se gestionan 100 bolsas.
+* Determinación de ganadores: El software debe establecer al ganador de la semana cruzando el número de la bolsa con los dos últimos dígitos del número premiado en el sorteo de la ONCE del jueves.
+* Lógica de asignación de premios o acumulación (Bote): El sistema debe registrar el resultado de la validación física de la bolsa. Si el biorresiduo cumple los requisitos, el sistema asignará el premio de 1.000 €; de no ser así, el sistema debe acumular dicho importe para el sorteo de la semana siguiente.
+* Gestión de derechos de usuario: La interfaz debe capturar el consentimiento explícito del usuario al registrarse y permitir la gestión para que ejerza sus derechos de acceso, rectificación, cancelación y oposición (ARCO).
+No Funcionales 
+* Arquitectura modular y abierta: La aplicación debe estar diseñada empleando tecnología Open Source y presentar una estructura modular, garantizando que el modelo sea transferible y fácil de adoptar por otros municipios con una mínima configuración.
+* Escalabilidad: El sistema debe estar preparado técnicamente para escalar desde su fase inicial de validación (100 bolsas a la semana) hacia un modelo más amplio de auditoría distribuida por barrios, en función del volumen de participación ciudadana.
+* Rendimiento y capacidad de infraestructura: Los servidores de la aplicación deben ser de alta capacidad para soportar eficientemente al menos a 15.000 usuarios activos.
+* Seguridad y cumplimiento normativo (Privacidad): El tratamiento de los datos personales debe realizarse bajo estricta conformidad con la normativa vigente (RGPD y LOPDGDD), asegurando que los datos se traten de manera confidencial y restringiendo totalmente la cesión de los mismos a terceros.
+* Transparencia y trazabilidad: El modelo técnico y de auditoría debe ser transparente. Para ello, el sorteo debe estar estrictamente vinculado al sistema externo de la ONCE (eliminando posibles sesgos del software), y el sistema debe permitir registrar digitalmente mediante fotografías el proceso de validación e inspección de la bolsa ganadora.

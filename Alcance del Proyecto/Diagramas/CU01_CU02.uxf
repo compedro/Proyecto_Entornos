@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+
+  <!-- ACTOR -->
+  <element>
+    <id>UMLActor</id>
+    <coordinates><x>20</x><y>160</y><w>80</w><h>100</h></coordinates>
+    <panel_attributes>Ciudadano</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- CLASE INTERFAZ (BOUNDARY) -->
+  <element>
+    <id>UMLClass</id>
+    <coordinates><x>160</x><y>100</y><w>310</w><h>200</h></coordinates>
+    <panel_attributes>&lt;&lt;boundary&gt;&gt;
+PantallaRegistro
+--
+- calle: String
+- numero: String
+- portal: String
+- nombreRepresentante: String
+- dni: String
+--
++ solicitarDatosRegistro(): void
++ mostrarNumeroUsuario(numero: String): void
++ mostrarErrorValidacion(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- CLASE DE CONTROL (CONTROL) -->
+  <element>
+    <id>UMLClass</id>
+    <coordinates><x>550</x><y>130</y><w>280</w><h>130</h></coordinates>
+    <panel_attributes>&lt;&lt;control&gt;&gt;
+GestorRegistro
+--
+--
++ validarDatosCompletos(datos: Object): void
++ comprobarDNIExistente(dni: String): void
++ generarNumeroUsuarioUnico(): void
++ procesarRegistro(datos: Object): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- CLASE DE ENTIDAD (ENTITY) - UsuarioDomicilio -->
+  <element>
+    <id>UMLClass</id>
+    <coordinates><x>900</x><y>80</y><w>230</w><h>190</h></coordinates>
+    <panel_attributes>&lt;&lt;entity&gt;&gt;
+UsuarioDomicilio
+--
+- dni: String
+- nombreRepresentante: String
+- calle: String
+- numero: String
+- portal: String
+- numeroUsuario: String
+--
++ crearUsuario(): void
++ getNumeroUsuario(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- CLASE DE ENTIDAD (ENTITY) - ConsentimientoDatos -->
+  <element>
+    <id>UMLClass</id>
+    <coordinates><x>900</x><y>340</y><w>230</w><h>100</h></coordinates>
+    <panel_attributes>&lt;&lt;entity&gt;&gt;
+ConsentimientoDatos
+--
+- fechaConsentimiento: String
+- aceptado: boolean
+--
++ registrarConsentimiento(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <!-- RELACIONES -->
+
+  <!-- 1. Ciudadano a PantallaRegistro (Asociación Simple) -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>70</x><y>180</y><w>110</w><h>40</h></coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+
+  <!-- 2. PantallaRegistro a GestorRegistro (Flecha Unidireccional / Asociación) -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>460</x><y>180</y><w>110</w><h>40</h></coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+
+  <!-- 3. GestorRegistro a UsuarioDomicilio (Flecha Unidireccional / Asociación) -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>820</x><y>180</y><w>100</w><h>40</h></coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+
+  <!-- 4. UsuarioDomicilio a ConsentimientoDatos (Asociación/Composición Débil) -->
+  <element>
+    <id>Relation</id>
+    <coordinates><x>1000</x><y>260</y><w>30</w><h>100</h></coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+
+</diagram>
